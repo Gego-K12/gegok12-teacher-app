@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@color/bgcolorforcardview"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="4dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavereason"
+                android:text="HEALTH ISSUE"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black">
+            </TextView>
+
+
+
+
+
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/editleave"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/edit_img">
+            </ImageView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/teacher_name_set"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teacher Name"
+                android:visibility="gone"
+                android:id="@+id/teacher_name_sets"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/teacher_name_for_leave"
+                android:text="example"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_toRightOf="@id/teacher_name_sets"
+                ></TextView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/leavetypeset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave Type"
+                android:textColor="@color/grey"
+                android:visibility="gone"
+                android:textSize="20sp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavetype"
+                android:text="PERSONAL LEAVE"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromdateset"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Date"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:visibility="gone"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavefromdate"
+                android:text="30 jul 2020"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/todateset"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Date"
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavetodate"
+                android:text="31 jul 2020"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusset"
+            android:visibility="gone"
+            android:layout_below="@id/todateset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/myleavestatuscolour"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@+id/myleavestatus"
+                android:background="@drawable/coloured_dot"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavestatus"
+                android:text="Approved"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:padding="4dp"
+                android:layout_alignParentEnd="true"
+                ></TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/grey"
+            ></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sessionset"
+            android:layout_below="@id/statusset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavesession"
+                android:text="Fever"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/remarksset"
+            android:layout_below="@id/sessionset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleaveremarks"
+                android:text="Fever"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/no_of_days_set"
+            android:layout_below="@id/statusset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks"
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/leave_count"
+                android:textColor="@color/reddishpink"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/approveleavebtn"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:background="@drawable/cuctomized_button"
+                ></Button>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rejectleavebtn"
+                android:text="Reject"
+                android:textAllCaps="false"
+                android:background="@drawable/cuctomized_button"
+                android:layout_marginLeft="20dp"
+                ></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

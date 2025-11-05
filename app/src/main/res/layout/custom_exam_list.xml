@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgcolorforcardview"
+        android:id="@+id/cardview"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/bgcolorforcardview">
+
+
+            <TextView
+                android:id="@+id/textView4_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="6dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="6dp"
+                android:text="phy"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toStartOf="@+id/textView5_count_present"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:background="#EFEFEF"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toEndOf="@id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView4_subject" />
+
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:background="#EFEFEF"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@id/textView8"
+                app:layout_constraintTop_toTopOf="@+id/textView5_count_present" />
+
+
+            <TextView
+                android:id="@+id/textView5_count_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="36"
+                android:textColor="	#90EE90"
+                app:layout_constraintEnd_toStartOf="@+id/textView6_count_absent"
+                app:layout_constraintStart_toEndOf="@+id/textView4_subject"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6_count_absent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="8dp"
+                android:text="3"
+                android:textColor="#FF7477"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView5_count_present"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Subject"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="@+id/textView4_subject"
+                app:layout_constraintStart_toStartOf="@+id/textView4_subject" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Present"
+                app:layout_constraintEnd_toEndOf="@+id/textView5_count_present"
+                app:layout_constraintStart_toStartOf="@+id/textView5_count_present"
+                app:layout_constraintTop_toBottomOf="@+id/textView5_count_present" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Absent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="@+id/textView6_count_absent"
+                app:layout_constraintStart_toStartOf="@+id/textView6_count_absent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/bgcolorforcardview"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview">
+
+
+        <TextView
+            android:id="@+id/exam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sample example title"
+            android:textColor="#FFBC16"
+            android:textSize="23sp"
+            android:visibility="gone"></TextView>
+
+
+        <LinearLayout
+            android:id="@+id/classdataset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exam_title"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Class :"></TextView>
+
+            <TextView
+                android:id="@+id/classname_for_examlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text=" I-A"></TextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/viewicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_new_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/examdateset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/classdataset"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_new_calender"
+                app:layout_constraintBottom_toBottomOf="@+id/examdateandtim_for_exam"
+                app:layout_constraintEnd_toStartOf="@+id/examdateandtim_for_exam"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/examdateandtim_for_exam"></ImageView>
+
+            <TextView
+                android:id="@+id/examdateandtim_for_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="26-03-2021 "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <ImageView
+                android:id="@+id/imageView55"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/ic_clock_red_color"
+                app:layout_constraintBottom_toBottomOf="@+id/examtiming"
+                app:layout_constraintEnd_toStartOf="@id/examtiming"
+                app:layout_constraintTop_toTopOf="@+id/examtiming"></ImageView>
+
+
+            <TextView
+                android:id="@+id/examtiming"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:text="11.30 as - 11.02 am"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/subjectset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/examdateset"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Subject :"></TextView>
+
+            <TextView
+                android:id="@+id/subject_for_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="tamil"
+                android:textColor="@color/black"></TextView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/portionset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subjectset"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Portion :"></TextView>
+
+            <TextView
+                android:id="@+id/portion_for_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="first chapter"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/descriptionset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/portionset"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/assignmentlistdescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is description"
+                android:textColor="@color/black"
+                android:textSize="20sp"></TextView>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionset"
+            android:padding="8dp">
+
+
+            <Button
+                android:id="@+id/uploadmark_for_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/cuctomized_button"
+                android:text="upload Marks"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></Button>
+
+
+            <Button
+                android:id="@+id/viewmark_for_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rectangle_for_button"
+                android:text="View Marks"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/uploadmark_for_exam"
+                app:layout_constraintTop_toTopOf="parent"
+                ></Button>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

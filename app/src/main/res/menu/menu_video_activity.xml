@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_audio_device"
+        android:icon="@drawable/ic_phonelink_ring_white_24dp"
+        android:title="@string/audio_device"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/student_list"
+        android:enabled="true"
+        android:title="Participants"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_message"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/white_board"
+        android:enabled="true"
+        android:title="White Board"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item android:id="@+id/share_screen_menu_item"
+        android:title="@string/share_screen"
+        android:icon="@drawable/ic_screen_share_white_24dp"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/file_share"
+        android:enabled="true"
+        android:title="File Share"
+        android:visible="true"
+        app:showAsAction="never" />
+
+
+
+    <item
+        android:id="@+id/image_share"
+        android:enabled="true"
+        android:title="Image Share"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_mute_all"
+        android:enabled="true"
+        android:title="Mute all"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_settings"
+        android:enabled="true"
+        android:title="@string/settings"
+        android:visible="true"
+        app:showAsAction="never" />
+
+</menu>

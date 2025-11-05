@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:minHeight="100dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navprofileimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+
+                android:id="@+id/navusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="18sp"
+                android:layout_weight="1">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/logout"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/redcolour_button"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:maxLines="1"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    ></TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/navposition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            ></TextView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_marginTop="10dp"
+            ></View>
+    </LinearLayout>
+
+</LinearLayout>

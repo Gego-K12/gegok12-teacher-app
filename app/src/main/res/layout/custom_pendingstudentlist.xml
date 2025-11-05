@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/bgcolorforcardview"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/studentleavereason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="HEALTH ISSUE"
+                android:textColor="@color/black"></TextView>
+
+            <ImageView
+                android:id="@+id/editleave"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_newly_edit"
+                android:visibility="gone"></ImageView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:visibility="gone"></View>
+
+        <RelativeLayout
+            android:id="@+id/student_name_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/teacher_name_sets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:visibility="gone"></TextView>
+
+            <TextView
+                android:id="@+id/student_name_for_leave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="student name"
+                android:textColor="@color/black"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:visibility="gone"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+
+            android:visibility="gone"></View>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fromdateset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:id="@+id/dot"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_new_clock_circular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From Date"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/studentleavefromdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="dd mmm yyyy"
+                app:layout_constraintBottom_toBottomOf="@id/dot"
+                app:layout_constraintStart_toEndOf="@id/dot"
+                app:layout_constraintTop_toTopOf="@id/dot"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+
+            android:visibility="gone"></View>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/todateset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Date"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <ImageView
+                android:id="@+id/dot1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_new_clock_circular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            <TextView
+                android:id="@+id/studentleavetodate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="dd mmm yyyy"
+                app:layout_constraintBottom_toBottomOf="@id/dot1"
+                app:layout_constraintStart_toEndOf="@id/dot1"
+                app:layout_constraintTop_toTopOf="@id/dot1"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:visibility="gone"></View>
+
+        <RelativeLayout
+            android:id="@+id/statusset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todateset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+               ></TextView>
+
+            <TextView
+                android:id="@+id/myleavestatuscolour"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@+id/studentleavestatus"
+                android:background="@drawable/orange_coloureddot"
+                android:gravity="center"></TextView>
+
+            <TextView
+                android:id="@+id/studentleavestatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="1dp"
+                android:text="Approved"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"></TextView>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:visibility="gone"></View>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/remarksset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusset"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/remarks_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Remarks :"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/studentleaveremarks"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/studentleaveremarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fever sdfsdfsdfdsf"
+                android:layout_marginStart="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/remarks_name"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/approveleavebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approve"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/cuctomized_button"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                ></Button>
+
+            <Button
+                android:id="@+id/rejectleavebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Reject"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/cuctomized_button"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                ></Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

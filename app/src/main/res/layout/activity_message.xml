@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarlayout"
+        android:background="@drawable/toolbar"
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                ></LinearLayout>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/back"
+                android:src="@drawable/ic_new_back_button"
+                android:paddingStart="5dp"
+                ></ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Private Messages"
+                android:textColor="@color/white"
+                android:fontFamily="@font/suezone_regular"
+                android:layout_marginLeft="30dp"
+                android:textSize="17sp">
+            </TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Private Messages"
+            android:textColor="@color/black"></TextView>
+        <TextView
+            android:id="@+id/privatemsgtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(4)"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"></TextView>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/messagerecyclerview"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/appbarlayout">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textnodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Data"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="gone">
+
+    </TextView>
+
+</LinearLayout>

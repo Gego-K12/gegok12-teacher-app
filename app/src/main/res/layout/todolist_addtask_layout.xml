@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/appbarlayout"
+            android:background="@drawable/new_toolbar_gradient_color"
+            android:theme="@style/ToolbarTheme"
+            >
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/backbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_new_back_button"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbarname"
+                    android:text="To Do List"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/suezone_regular"
+                    android:textColor="@color/white">
+
+                </TextView>
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="8dp"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assign To"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:id="@+id/asssigntext"
+                    android:layout_marginBottom="10dp"></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/squareborder"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/asssigntext">
+
+                    <Spinner
+                        android:id="@+id/assignedtospinner"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        ></Spinner>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/classlayout"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="visible"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Class"
+                        android:id="@+id/class_id"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/black"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        ></TextView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/squareborder"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/class_id"
+                        app:layout_constraintStart_toEndOf="@+id/linearLayout4"        >
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:id="@+id/studentclassspinner"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:spinnerMode="dropdown"
+                            ></Spinner>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/teacherlayout"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    ></TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/squareborder"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                        android:id="@+id/teacherspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:inputType="textPersonName"
+                        android:padding="4dp"
+                        android:layout_marginTop="5dp"
+                        >
+
+                    </androidx.appcompat.widget.AppCompatAutoCompleteTextView>
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                ></TextView>
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Enter Title"
+                android:background="@drawable/squareborder"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                ></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                ></TextView>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="top"
+                android:hint="Enter Description"
+                android:background="@drawable/squareborder"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                ></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                ></TextView>
+
+            <LinearLayout
+                android:id="@+id/datelayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:background="@drawable/squareborder"
+                >
+
+                <TextView
+                    android:id="@+id/datetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="--"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_marginTop="5dp"
+                    ></TextView>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reminder"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/squareborder"
+                android:layout_marginBottom="10dp"
+                >
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reminderspinner"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginTop="5dp"
+                    ></Spinner>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/buttonLinearLayout"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cuctomized_button"
+                android:layout_marginTop="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/submitbutton"
+                    android:text="Submit"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    ></TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gegosoft.schoolteacherapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:allowAudioPlaybackCapture="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.Add_AssigmentActivity" />
+        <activity android:name=".Activity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.LeaveActivity" />
+        <activity android:name=".Activity.MyLeaveActivity" />
+        <activity android:name=".Activity.AssignmentList" />
+        <activity android:name=".Activity.ApproveLeaveActivity" />
+        <activity android:name=".Activity.RejectLeaveActivity" />
+        <activity android:name=".Activity.MyProfileActivity" />
+        <activity android:name=".Activity.StudentsAssignmentActivity" />
+        <activity android:name=".Activity.To_Do_List_Activity" />
+        <activity android:name=".Activity.ToDoList_AddTask_Activity" />
+        <activity android:name=".Activity.HolidayListActivity" />
+        <activity android:name=".Activity.LessonPlanActivity" />
+        <activity android:name=".Activity.AttendanceActivity" />
+        <activity android:name=".Activity.MessageActivity" />
+        <activity android:name=".Activity.AllNotificationActivity" />
+        <activity android:name=".Activity.HomeWorkActivity" />
+        <activity android:name=".Activity.PDFWebViewActivity" />
+        <activity android:name=".Activity.StudentSubmittedHomeworkActivity" />
+        <activity android:name=".Activity.AddHomeworkActivity" />
+        <activity android:name=".Activity.MyLeaveActivityWithPermission" />
+        <activity android:name=".Activity.AbsentListActivity" />
+        <activity android:name=".Activity.StudentLeaveList" />
+        <activity android:name=".Activity.ForgotPasswordActivity" />
+        <activity android:name=".Activity.ChangePassword" />
+        <activity android:name=".Activity.ChangePasswordWithLogin" />
+        <activity android:name=".Activity.ViewExamMarkActivity" />
+        <activity android:name=".Activity.UploadMarksActivity" />
+        <activity android:name=".Activity.ExamMarkActivity" />
+        <activity android:name=".Activity.TimeTableActivity" />
+        <activity android:name=".Activity.RoomActivity"/>
+        <activity android:name=".Activity.AddInvitesActivity"/>
+        <activity android:name=".Activity.CreateRoomActivity"/>
+        <activity android:name=".Activity.EditRoomActivity"/>
+        <activity android:name=".Activity.ManageInvitesActivity"/>
+        <activity android:name=".Activity.VideoActivity"/>
+
+        <receiver
+            android:name=".Receiver.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.gegosoft.schoolteacherapp.NotificationReceiver" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".Storage.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Receiver.NotifierAlarm"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

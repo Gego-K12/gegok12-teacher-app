@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myleavetoolbar"
+        android:background="@drawable/toolbar"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:id="@+id/myleavebackbtn"
+            android:src="@drawable/ic_new_back_button"
+            ></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Status"
+            android:textColor="@color/whitecolor"
+            android:textSize="17sp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/suezone_regular"
+            ></TextView>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myleaverecyclerview"
+        android:visibility="gone"
+        ></androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="280dp"
+        android:id="@+id/nodata"
+        android:text="No Data"
+        android:gravity="center"
+        ></TextView>
+</LinearLayout>

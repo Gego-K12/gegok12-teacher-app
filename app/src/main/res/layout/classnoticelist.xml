@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="100dp"
+    app:cardElevation="6dp"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noticebackground"
+        android:src="@drawable/noticedemo"
+        android:scaleType="fitXY"
+        ></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/classtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="start"
+                android:text="Parent Teacher Meeting"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_weight="1">
+
+            </TextView>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/classdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/test"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/black">
+
+        </TextView>
+    </LinearLayout>
+
+
+</FrameLayout>

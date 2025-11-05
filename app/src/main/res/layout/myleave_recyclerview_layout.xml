@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="4dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavereason"
+                android:text="HEALTH ISSUE"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="17sp"
+                android:layout_weight="1"></TextView>
+            <ImageView
+                android:id="@+id/status_confirmed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_checked_svg"></ImageView>
+
+            <ImageView
+                android:id="@+id/status_pending"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/new_pending"></ImageView>
+
+            <ImageView
+                android:id="@+id/status_rejected"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_new_cancel"></ImageView>
+
+
+            <ImageView
+                android:id="@+id/delete_leave"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_newly_delete"
+                android:layout_alignParentEnd="true"
+
+                ></ImageView>
+
+
+            <ImageView
+                android:id="@+id/editleave"
+               android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_newly_edit"
+                android:layout_alignParentEnd="true"
+
+                ></ImageView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/leavetypeset"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="Leave Type"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:src="@drawable/ic_document_svg"
+                ></ImageView>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavetype"
+                android:text="PERSONAL LEAVE"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/reddishpink"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fromdateset"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_greyclock_svg"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavefromdate"
+                android:text="dd mmm yyyy"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/todateset"
+            android:layout_below="@id/leavetypeset"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_greyclock_svg"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavetodate"
+                android:text="dd mmm yyyy"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_regular"
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sessionset"
+            android:layout_below="@id/todateset"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_greyclock_svg"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleavesession"
+                android:text="Forenoon"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="10dp"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/remarksset"
+            android:layout_below="@id/statusset"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks :"
+                android:textSize="14sp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/myleaveremarks"
+                android:text="Enter the Remarks"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+
+                android:layout_marginStart="10dp"
+                ></TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentsset"
+            android:layout_below="@id/statusset"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comments :"
+                android:textSize="14sp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mycomments"
+                android:text="Enter the Comments"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/approveleavebtn"
+                android:text="APPROVE"
+                android:textColor="#48BB78"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="gone"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rejectleavebtn"
+                android:text="REJECT"
+                android:textColor="@color/reddishpink"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                ></TextView>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/countset"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No of days Leave taken:"
+                    android:textSize="14sp"
+                    ></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/myleavecount"
+                    android:text="2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/reddishpink"
+                    android:layout_marginStart="10dp"
+                    ></TextView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

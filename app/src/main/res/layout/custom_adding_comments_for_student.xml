@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/name_for_user"
+        android:text="student name"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_extrabold">
+    </TextView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:background="@drawable/square_border2"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/edtcomments_for_new"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/emojie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="Enter Comments"
+            >
+        </androidx.appcompat.widget.AppCompatEditText>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/emojie"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:tint="@color/black"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_emoji"
+            app:layout_constraintStart_toEndOf="@+id/edtcomments_for_new"
+            app:layout_constraintTop_toTopOf="@+id/edtcomments_for_new"
+            app:layout_constraintBottom_toBottomOf="@+id/edtcomments_for_new"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

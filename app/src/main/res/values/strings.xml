@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Teacher Demo School</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="welcome_string">"Login to communicate with Teachers to know about your children's studies and more ..."</string>
+
+    <string name="profile">Profile</string>
+    <string name="leave">Leaves</string>
+    <string name="change_password">Change Password</string>
+    <string name="home_work">Home Work</string>
+    <string name="lesson_plan">Lesson Plan</string>
+    <string name="fee">Fee</string>
+    <string name="staff_info">Staff_info</string>
+
+    <string name="room">Video Room</string>
+    <string name="exams">Exams</string>
+    <string name="events">Events</string>
+    <string name="attendance">Attendance</string>
+    <string name="time_table">Time Table</string>
+    <string name="notiifcations">Notifications</string>
+    <string name="assignment">Assignment</string>
+    <string name="discipline">Discipline</string>
+    <string name="class_events">Class Events</string>
+    <string name="magazine">Magazine</string>
+    <string name="event_gallery">Event Gallery</string>
+
+    <string name="school_info">School Info</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="classes">Class</string>
+    <string name="feedback">Feedback</string>
+    <string name="log_out">Log Out</string>
+
+    <string name="about_us">About Us</string>
+    <string name="affiliated_by">Affiliated By : </string>
+    <string name="affiliated_no">Affiliation No : </string>
+    <string name="established_on">Established on : </string>
+    <string name="board">Board : </string>
+    <string name="landline_no">Landline number : </string>
+
+
+    <string name="room_status">status</string>
+    <string name="error_retrieving_access_token">Error retrieving token</string>
+    <string name="permissions_needed">Camera,Microphone and Phone State permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="codec_title">Set your preferred audio and video codec. Not all codecs are supported with Group rooms. The media server will fallback to OPUS or VP8 if a preferred codec is not supported.</string>
+    <string name="pref_title_audio_codec">Audio Codec</string>
+    <string name="pref_title_video_codec">Video Codec</string>
+    <string name="sender_bandwidth_constraints">Set sender bandwidth constraints. Zero represents the WebRTC default value which varies by codec.</string>
+    <string name="max_audio_bitrate">Max Audio Bitrate (bits per second)</string>
+    <string name="max_video_bitrate">Max Video Bitrate (bits per second)</string>
+    <string name="vp8_simulcast">VP8 Simulcast</string>
+    <string name="audio_device">Audio Device</string>
+    <string name="room_screen_select_device">Select Device</string>
+
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="reason">Reason</string>
+    <string name="remarks">Remarks</string>
+    <string name="submit">Submit</string>
+    <string name="start_typing">typing...</string>
+    <string name="oldpassword">Old Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="confirmbtn">Confirm</string>
+    <string name="test">Activities in the system are managed as activity stacks. When a new activity is started, it is usually placed on the top of the current stack and becomes the running activity -- the previous activity always remains below it in the stack, and will not come to the foreground again until the new activity exits. There can be one or multiple activity stacks visible on screen.</string>
+
+
+    <string name="share_screen">Share screen</string>
+    <string name="stop_screen_share">Stop screen share</string>
+    <string name="screen_capture_permission_not_granted">Screen capture permission not granted</string>
+    <string name="screen_capture_error">Screen capturer error occurred.</string>
+
+    <string-array name="session">
+        <item>Forenoon</item>
+        <item>Afternoon</item>
+    </string-array>
+    <string name="internal_storage">Internal storage</string>
+    <string name="color_picker_default_title">Select a Color</string>
+</resources>

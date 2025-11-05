@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:id="@+id/holidaymonth"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_weight="1"
+            android:text="January"/>
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/redcolour_button">
+            <TextView
+                android:id="@+id/holidaycount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:background="#F9FBFF"        >
+    </LinearLayout>
+
+</LinearLayout>

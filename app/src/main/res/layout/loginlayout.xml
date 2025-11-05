@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitecolor">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            ></ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"></ImageView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Teacher Login"
+            android:layout_gravity="center"
+            android:fontFamily="@font/suezone_regular"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_user"></ImageView>
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emailedit"
+                android:hint="Mobile Number"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:theme="@style/LoginEdittext"
+                android:inputType="number">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_padlock"
+                    ></ImageView>
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/passwordedt"
+                android:hint="Password"
+                android:layout_gravity="center"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:theme="@style/LoginEdittext"
+                >
+
+            </EditText>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotpassword"
+            android:text="@string/forgot_password"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/greyclr"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/roundborder"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FF7477">
+
+            <TextView
+                android:id="@+id/loginbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Sign In"
+                android:background="#FF7477"
+                android:textColor="@color/whitecolor"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+
+                ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_marginLeft="40dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account ?"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                ></TextView>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Powered by:Gegok12"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                ></androidx.appcompat.widget.AppCompatTextView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V1.0"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                ></androidx.appcompat.widget.AppCompatTextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

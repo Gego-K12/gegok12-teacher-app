@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/picpro"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/profile_demopic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/studentcompletedassignmentname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="name"
+                android:fontFamily="@font/poppins_bold"
+                app:layout_constraintBottom_toBottomOf="@+id/picpro"
+                app:layout_constraintStart_toEndOf="@id/picpro"
+                app:layout_constraintTop_toTopOf="@+id/picpro">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/studentcompletedassignmentpdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_new_checked"
+                app:layout_constraintBottom_toBottomOf="@+id/studentcompletedassignmentname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/studentcompletedassignmentname">
+
+            </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/squareborder"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/title_complete_assignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Assignment Test">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/studentcompletedassignmentsubmissiondate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:text="  31-06-20"></TextView>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imag"
+                android:layout_marginEnd="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_toLeftOf="@id/studentcompletedassignmentsubmissiondate"
+                android:src="@drawable/ic_clock_green_circular_image"></ImageView>
+
+
+
+            <TextView
+                android:id="@+id/studentcompletedassignmentstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:text="Completed"
+                android:textColor="@color/lightgreen"
+                android:textSize="20sp"
+                android:visibility="gone"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/assigneddateset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_complete_assignment"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="Roll No "
+                    android:textColor="@color/grey"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:id="@+id/studentcompletedassignmentrollno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text=":    30"
+                    android:textColor="@color/lightblack"
+                    android:textSize="17sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submissiondateset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assigneddateset"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="gone"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="Submission Date"
+                    android:textColor="@color/grey"
+                    android:textSize="17sp"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/markset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/submissiondateset"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Total Marks: "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/studentcompletedassignmentmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="30"
+                    android:layout_marginStart="2dp"
+                    ></TextView>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/viewfilesofimages"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_new_images"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/descriptionset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/markset"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comments: "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    ></TextView>
+
+                <TextView
+                    android:id="@+id/studentcompletedassignmentcomments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="comments"
+                    android:layout_marginStart="2dp"
+                   android:fontFamily="@font/poppins_regular"
+                   ></TextView>
+
+
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionset"
+                android:padding="8dp">
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gegosoft.schoolteacherapp.Activity.LessonPlanActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/lessonplanback"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingLeft="5dp"
+                android:src="@drawable/ic_new_back_button"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/suezone_regular"
+                android:text=" Lesson Plan"
+                android:textColor="@color/whitecolor"
+                android:textSize="17sp"></TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/lpprofilepic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profile_demopic"
+                android:layout_marginStart="20dp"
+                ></de.hdodenhof.circleimageview.CircleImageView>
+            <TextView
+                android:id="@+id/lpprofilename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heath Glover"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/poppins_grey_color"
+                android:fontFamily="@font/poppins_bold"
+
+                ></TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view_lessonplan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nodata"
+        android:text="No data"
+        android:visibility="gone"
+        android:gravity="center"
+        ></TextView>
+</LinearLayout>

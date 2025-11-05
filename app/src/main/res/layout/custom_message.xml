@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:background="#F9FBFF"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_clock_red_color"></ImageView>
+            <TextView
+                android:id="@+id/notificationtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="2 hours ago"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                />
+
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Principal"
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_semibold"
+            />
+
+        <TextView
+            android:id="@+id/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loremipsum sdofihwh......"
+            android:ellipsize="end"
+            android:maxLines="2"
+
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        ></View>
+
+</LinearLayout>

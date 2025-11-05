@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/todolist"
+        android:checked="false"
+        android:title="To-Do List"
+        android:icon="@drawable/ic_assignment_svg"></item>
+
+    <item
+        android:id="@+id/studentleave"
+        android:checked="false"
+        android:title="Student Leave"
+        android:icon="@drawable/ic_applyleave_svg"></item>
+
+    <item
+        android:id="@+id/holidaylist"
+        android:checked="false"
+        android:title="Holiday"
+        android:icon="@drawable/ic_holiday_svg"></item>
+
+    <item
+        android:id="@+id/videocall"
+        android:checked="false"
+        android:title="Online Class"
+        android:icon="@drawable/ic_onlineclass_svg">
+    </item>
+
+    <item
+        android:id="@+id/teacherleavelist"
+        android:checked="false"
+        android:title="My Leave"
+        android:icon="@drawable/ic_leave_list">
+    </item>
+
+
+    <item
+        android:id="@+id/lessonplanactivity"
+        android:checked="false"
+        android:title="LessonPlan"
+        android:icon="@drawable/ic_lessonplan_svg"></item>
+
+    <item
+        android:id="@+id/addhomework"
+        android:checked="false"
+        android:title="Add Homework"
+        android:icon="@drawable/ic_homework_svg"></item>
+
+    <item
+        android:id="@+id/absentlist"
+        android:checked="false"
+        android:title="Absent List"
+        android:icon="@drawable/ic_absentlist_svg"
+        ></item>
+
+
+    <item
+        android:id="@+id/addassignement"
+        android:checked="false"
+        android:title="Add Assignment"
+        android:icon="@drawable/ic_assignment_svg"></item>
+
+    <item
+        android:id="@+id/exams"
+        android:checked="false"
+        android:icon="@drawable/ic_exam_icon_svg"
+        android:title="Exams"/>
+
+
+    <item
+        android:id="@+id/leavchecker_by_principal"
+        android:checked="false"
+        android:icon="@drawable/ic_approve"
+        android:title="Leave Approval">
+    </item>
+
+
+    <item
+        android:id="@+id/changepassword"
+        android:checked="false"
+        android:icon="@drawable/ic_change_passwrord_icon_svg"
+        android:title="Change Password"
+        ></item>
+
+</menu>

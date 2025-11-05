@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/propic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/profile_demopic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/studentsubmittedassignmentname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="name"
+                android:fontFamily="@font/poppins_semibold"
+                app:layout_constraintBottom_toBottomOf="@+id/propic"
+                app:layout_constraintStart_toEndOf="@id/propic"
+                app:layout_constraintTop_toTopOf="@+id/propic"></TextView>
+
+
+            <Button
+                android:id="@+id/studentsubmittedassignmentstatus"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/cornerradiustry"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Completed"
+                app:layout_constraintBottom_toBottomOf="@+id/studentsubmittedassignmentname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/studentsubmittedassignmentname"
+                ></Button>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/squareborder"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/assign_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assignment Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/poppins_semibold"
+                ></TextView>
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_toLeftOf="@+id/studentsubmittedassignmentsubmissiondate"
+                android:src="@drawable/ic_new_checked"
+                app:layout_constraintBottom_toBottomOf="@+id/assign_title"
+                app:layout_constraintEnd_toStartOf="@id/studentsubmittedassignmentsubmissiondate"
+                app:layout_constraintTop_toTopOf="@+id/assign_title"></ImageView>
+
+
+            <TextView
+                android:id="@+id/studentsubmittedassignmentsubmissiondate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:text="31-06-20"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView3"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/assign_title"
+                app:layout_constraintTop_toBottomOf="@id/studentsubmittedassignmentsubmissiondate"
+                ></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/assigneddateset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/studentsubmittedassignmentsubmissiondate"
+                android:layout_below="@id/assign_title"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="Roll No "
+                    android:textColor="@color/lightblack"
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:id="@+id/studentsubmittedassignmentrollno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="30"
+                    android:textColor="@color/lightblack"
+                    android:textSize="16sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/submissiondateset"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assigneddateset"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:text="Submission Date"
+                    android:textColor="@color/lightblack"
+                    android:textSize="16sp"></TextView>
+
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/markset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/submissiondateset"
+                android:layout_marginStart="0dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                    android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/studentsubmittedassignmentsubmissiondate">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:text="Total Marks:  "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/totalsamarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="30"
+                    android:textColor="#FF7477"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="@+id/textView"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/studentsubmittedassignmentpdf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_newly_attach"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/saaddmarksbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/saaddmarksbtn"></ImageView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/saaddmarksbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/markset"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:background="@drawable/addmark_greencolor"
+                android:text="Add Marks"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/markset"></androidx.appcompat.widget.AppCompatButton>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

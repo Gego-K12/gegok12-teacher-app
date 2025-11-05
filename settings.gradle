@@ -1,0 +1,4 @@
+rootProject.name='School Teacher App'
+
+include (":app")
+

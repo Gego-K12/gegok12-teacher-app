@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar"
+            >
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/ic_new_back_button">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/suezone_regular"
+                    android:text="Edit Room"
+                    android:textColor="@color/white"
+                    android:textSize="17sp">
+                </TextView>
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Room Name">
+            </TextView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/edtroomname"
+                android:hint="Enter Name"
+                android:background="@drawable/squareborder"
+                android:layout_gravity="start"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp">
+            </EditText>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Description"></TextView>
+
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/edtdescription"
+                android:hint="Enter Description"
+                android:gravity="start"
+                android:background="@drawable/squareborder"
+                android:layout_gravity="start"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                >
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Schedule date">
+            </TextView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="@drawable/squareborder"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/scheduledatetxt"
+                    android:hint="dd-MM-YYYY"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    ></TextView>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/scheduledatecalendar"
+                    android:src="@drawable/calendar1"
+                    ></ImageView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:text="Duration(mins)">
+            </TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/edtduration"
+                android:hint="Duration"
+                android:inputType="time"
+                android:background="@drawable/squareborder"
+                android:layout_gravity="start"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                >
+
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Class"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+
+                android:layout_marginBottom="10dp"
+                >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/squareborder"
+                android:layout_marginBottom="10dp"
+                >
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:id="@+id/selectclassspinner"
+                    android:spinnerMode="dialog"
+                    android:padding="8dp"
+                    >
+
+                </Spinner>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Subject"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                >
+
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/squareborder"
+                android:layout_marginBottom="10dp"
+                >
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:id="@+id/selectsubjectspinner"
+                    android:spinnerMode="dialog"
+                    android:padding="8dp"
+                    >
+
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:text="Submit"
+            android:background="@drawable/cuctomized_button">
+        </Button>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@drawable/toolbar"
+        >
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_new_back_button"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarname"
+            android:text=""
+            android:textColor="@color/whitecolor"
+           android:fontFamily="@font/suezone_regular"
+            android:textSize="17sp"
+            android:layout_marginLeft="30dp"
+            ></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerview"
+        android:layout_below="@id/toolbar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/textnodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Data"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        >
+
+    </TextView>
+
+</RelativeLayout>

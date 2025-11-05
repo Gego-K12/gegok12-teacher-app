@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3047053127",
+    "project_id": "teacherapp-adb78",
+    "storage_bucket": "teacherapp-adb78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3047053127:android:8a60c79cfa9c83d449de62",
+        "android_client_info": {
+          "package_name": "com.gegosoft.schoolteacherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3047053127-0hd89i2k9oki7ukstqon1gjgbb3h64kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBctCyRXGxz8iLkrnj2_tQrJDKFrFcMAVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3047053127-0hd89i2k9oki7ukstqon1gjgbb3h64kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

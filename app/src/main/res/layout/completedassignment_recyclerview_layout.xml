@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:background="@color/black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#D3D3D3">
+
+        <TextView
+            android:id="@+id/completedassignmentclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="XI-A"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            android:textStyle="bold"></TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/completedassignmenttitle"
+        android:text="Title"
+        android:gravity="center_horizontal"
+        android:textColor="@color/lightred"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@id/completedassignmentclass"
+        ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/completedassignmentstatus"
+            android:layout_below="@id/completedassignmenttitle"
+            android:text="Pending"
+            android:textColor="@color/lightgreen"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            ></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/assigneddateset"
+        android:layout_below="@id/completedassignmenttitle"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AssignedDate:"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/completedassignmentassigneddate"
+            android:text="30-07-20"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/submissiondateset"
+        android:layout_below="@id/assigneddateset"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="SubmissionDate:"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/completedassignmentsubmissiondate"
+            android:text="30-07-20"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/markset"
+        android:layout_below="@id/submissiondateset"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Mark :"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/completedassignmentmark"
+            android:text="30"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/descriptionset"
+        android:layout_below="@id/markset">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Description :"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/completedassignmentdescription"
+            android:text="this is description"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            ></TextView>
+    </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
