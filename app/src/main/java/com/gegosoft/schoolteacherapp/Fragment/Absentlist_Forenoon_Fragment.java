@@ -74,10 +74,12 @@ public class Absentlist_Forenoon_Fragment extends Fragment {
             public void onResponse(Call<AttendanceModel> call, Response<AttendanceModel> response) {
                 if (response.isSuccessful()) {
                     attendanceModelList = response.body().getStudentlist();
-                    total_count.setText(String.valueOf(attendanceModelList.size()));
-                    standardid=attendanceModelList.get(0).getStandardLinkId().toString();
+                    if(!attendanceModelList.isEmpty()) {
+                        total_count.setText(String.valueOf(attendanceModelList.size()));
+                        standardid = attendanceModelList.get(0).getStandardLinkId().toString();
 
-                    getForenoonabsent();
+                        getForenoonabsent();
+                    }
                 } else {
                     Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
                 }
