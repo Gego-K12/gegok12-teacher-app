@@ -240,7 +240,7 @@
                 android:id="@+id/studentleaveremarks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fever sdfsdfsdfdsf"
+                android:text="Fever"
                 android:layout_marginStart="1dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@id/remarks_name"></TextView>

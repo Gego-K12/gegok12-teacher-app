@@ -4,14 +4,12 @@
 
     >
 
-    // The width and color of the border
     <stroke
         android:width="2dp"
         android:color="@color/whiteshviolet"
 
         />
 
-    // The desired corner radius. reduce it to keep it less rounded
     <corners android:radius="30dp" />
 <gradient
     android:startColor="@color/whiteshviolet"
@@ -19,7 +17,6 @@
     android:centerColor="@color/whiteshviolet">
 
 </gradient>
-    // Add your desired padding
     <padding
         android:left="20dp"
         android:top="10dp"

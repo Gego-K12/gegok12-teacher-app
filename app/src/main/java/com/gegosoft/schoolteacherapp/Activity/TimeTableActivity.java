@@ -96,7 +96,14 @@ public class TimeTableActivity extends AppCompatActivity {
 
             }
         });
-        gettimetable();
+        if (isTimeTablePurchased()) {
+            gettimetable();
+        } else {
+            showPurchaseCard();
+        }
+    }
+    private boolean isTimeTablePurchased() {
+        return userDetailsSharedaPref.getBoolean("timetable", false);
     }
     private void gettimetable(){
         api = ApiClient.getClient().create(Api.class);
@@ -110,21 +117,14 @@ public class TimeTableActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()){
-
-
                         try {
-
-
                             JSONObject jsonObject = new JSONObject(response.body().string());
-
-
                             timeTableModels = new Gson().fromJson(jsonObject.toString(),
                                     new TypeToken<TImeTable_Model>() {
                                     }.getType());
 
                             dayObj = jsonObject.getJSONObject("data");
                             day_arr = dayObj.names();
-
                             String[] labels = new String[day_arr.length()];
                             for (int i = 0; i < day_arr.length (); i++) {
                                 String key = day_arr.getString (i);

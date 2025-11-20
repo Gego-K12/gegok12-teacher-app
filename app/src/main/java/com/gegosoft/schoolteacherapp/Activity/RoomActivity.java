@@ -102,7 +102,11 @@ public class RoomActivity extends AppCompatActivity {
         roomContainer = findViewById(R.id.room_container);
         purchaseContainer = findViewById(R.id.purchaseContainer);
         if (CheckNetwork.isInternetAvailable(this)){
-            getRoomlist();
+            if (isRoomPurchased()) {
+                getRoomlist();
+            } else {
+                showPurchaseCard();
+            }
         }
         btn_create_room.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +122,9 @@ public class RoomActivity extends AppCompatActivity {
             }
         });
     }
-
+    private boolean isRoomPurchased() {
+        return userDetailsSharedPref.getBoolean("videoroom", false);
+    }
     private void getRoomlist()
     {
         Call<RoomListModel> listModelCall = api.getListofRooms(headermap);

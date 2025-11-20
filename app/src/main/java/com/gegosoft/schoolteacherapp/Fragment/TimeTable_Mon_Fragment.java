@@ -1,8 +1,6 @@
 package com.gegosoft.schoolteacherapp.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +31,6 @@ public class TimeTable_Mon_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.mon_recyclerview_layout, null);
         dayname = getArguments().getString("dayname");
         periodsList = getArguments().getParcelableArrayList(dayname);
-        Log.d("APP22","Fragment: " +dayname);
         recyclerView = view.findViewById(R.id.monrecyclerview);
         invisibletext = view.findViewById(R.id.monnodatafoundtxt);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

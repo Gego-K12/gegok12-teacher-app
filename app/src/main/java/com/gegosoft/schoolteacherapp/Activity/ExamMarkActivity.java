@@ -80,8 +80,14 @@ public class ExamMarkActivity extends AppCompatActivity {
         headermap.put("Authorization", "Bearer " + userDetailsSharedPref.getString("token"));
         headermap.put("Accept", "application/json");
 
-        getexamlists();
-
+        if (isExamPurchased()) {
+            getexamlists();
+        } else {
+            showPurchaseCard();
+        }
+    }
+    private boolean isExamPurchased() {
+        return userDetailsSharedPref.getBoolean("exam", false);
     }
 
     private void getexamlists() {
@@ -136,8 +142,6 @@ public class ExamMarkActivity extends AppCompatActivity {
         recyclerView.setAdapter(examListAdapter);
         examListAdapter.notifyDataSetChanged();
     }
-
-
 
     public  class MyExamList extends ExpandableGroup<ExamListModel.Datum.Schedule> {
 

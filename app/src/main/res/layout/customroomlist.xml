@@ -65,7 +65,7 @@
             app:layout_constraintTop_toBottomOf="@id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Infosys interview questions and interview experiences of various students who have cracked Infosys."
+            android:text="Lorem ipsum dolor sit amet,consectetur adipiscing elit.Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
             android:layout_marginTop="4dp">
         </TextView>
 

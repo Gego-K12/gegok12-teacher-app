@@ -40,6 +40,7 @@ import com.gegosoft.schoolteacherapp.Helper.ApiClient;
 import com.gegosoft.schoolteacherapp.Helper.AppUtils;
 import com.gegosoft.schoolteacherapp.Helper.ProgressDialogFragment;
 import com.gegosoft.schoolteacherapp.Interface.RecycleronItemclick;
+import com.gegosoft.schoolteacherapp.Models.AddonModel;
 import com.gegosoft.schoolteacherapp.Models.ClassNoticeBoardModel;
 import com.gegosoft.schoolteacherapp.Models.DashboardModel;
 import com.gegosoft.schoolteacherapp.Models.LogOutModel;
@@ -137,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
         }
     };
 
@@ -212,7 +211,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
         getdprofiledetails();
         logout = hView.findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
@@ -338,13 +336,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
 
-                if (menuItem.isChecked())
-                    menuItem.setChecked(false);
-                else menuItem.setChecked(true);
+                for (int i = 0; i < navigationView.getMenu().size(); i++) {
+                    navigationView.getMenu().getItem(i).setChecked(false);
+                }
+                menuItem.setChecked(true);
+
                 drawerLayout.closeDrawers();
 
                 int id = menuItem.getItemId();
-
                 if (id == R.id.teacherleavelist) {
                     startActivity(new Intent(MainActivity.this, MyLeaveActivity.class));
                     return true;
@@ -411,6 +410,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        getAddonDetails();
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
             registerReceiver(notificationReceiver, new IntentFilter(NotificationReceiver.ACTION_NOTIFICATION),Context.RECEIVER_NOT_EXPORTED);
         }else {
@@ -418,6 +418,28 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void getAddonDetails() {
+        Call<AddonModel> addonDetail = api.getAddons(headermap);
+        addonDetail.enqueue(new Callback<AddonModel>() {
+            @Override
+            public void onResponse(Call<AddonModel> call, Response<AddonModel> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    List<AddonModel.AddonDatum> datumList = response.body().getData();
+                    if(datumList != null) {
+                        for (AddonModel.AddonDatum datum : datumList) {
+                            String addonName = datum.getName();
+                            boolean purchased = datum.isPurchaseStatus();
+                            userDetailsSharedPref.saveBoolean(addonName.toLowerCase(), purchased);
+                        }
+                    }
+                }
+            }
+            @Override
+            public void onFailure(Call<AddonModel> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "Failed to fetch addons: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     private void getdprofiledetails() {
 
@@ -450,7 +472,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
     private void getClassNoticeBoard() {
 
