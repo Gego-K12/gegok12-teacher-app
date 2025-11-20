@@ -21,7 +21,7 @@ public class ApiClient {
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS).build();
 
-        retrofit = new Retrofit.Builder().baseUrl("https://demo1-addon.gegok12.com/")
+        retrofit = new Retrofit.Builder().baseUrl("") //paste your url here
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
