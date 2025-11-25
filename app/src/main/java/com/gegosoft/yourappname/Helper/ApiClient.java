@@ -1,4 +1,4 @@
-package com.gegosoft.schoolteacherapp.Helper;
+package com.gegosoft.yourappname.Helper;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +21,7 @@ public class ApiClient {
                 .connectTimeout(30, TimeUnit.SECONDS)
                 .readTimeout(30, TimeUnit.SECONDS).build();
 
-        retrofit = new Retrofit.Builder().baseUrl("") //paste your url here
+        retrofit = new Retrofit.Builder().baseUrl("") //paste your domain url here
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
