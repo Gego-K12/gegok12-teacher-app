@@ -13,7 +13,7 @@ import org.json.JSONObject;
 public class NotificationReceiver extends BroadcastReceiver {
     UserDetailsSharedPref userDetailsSharedPref;
 
-    public static String ACTION_NOTIFICATION = "com.gegosoft.schoolteacherapp.NotificationReceiver";
+    public static String ACTION_NOTIFICATION = "com.gegosoft.yourappname.NotificationReceiver";
     @Override
     public void onReceive(Context context, Intent intent) {
         userDetailsSharedPref = userDetailsSharedPref.getInstance(context);
