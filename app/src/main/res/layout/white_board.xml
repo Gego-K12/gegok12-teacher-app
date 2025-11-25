@@ -10,13 +10,13 @@
         android:layout_height="wrap_content">
 
 
-        <com.gegosoft.schoolteacherapp.Helper.CollaborativeDrawingView
+        <com.gegosoft.yourappname.Helper.CollaborativeDrawingView
             android:id="@+id/collaborativeDrawingView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             >
 
-        </com.gegosoft.schoolteacherapp.Helper.CollaborativeDrawingView>
+        </com.gegosoft.yourappname.Helper.CollaborativeDrawingView>
 
         <ImageView
             android:id="@+id/close_image"
