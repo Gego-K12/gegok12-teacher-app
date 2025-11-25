@@ -1,10 +1,13 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+/*
+...... namespace and applicationId must be identical .......
+ */
 android {
     compileSdk 34
-    namespace("com.gegosoft.schoolteacherapp")
+    namespace("com.gegosoft.yourappname")  //paste your package name here
     defaultConfig {
-        applicationId "com.gegosoft.schoolteacherapp"
+        applicationId "com.gegosoft.yourappname" //paste your package name here
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
