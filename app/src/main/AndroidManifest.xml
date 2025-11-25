@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.gegosoft.schoolteacherapp">
+    package="com.gegosoft.yourappname">   <!-- paste your package name-->
+
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -43,9 +44,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.MainActivity" />
-        <activity android:name=".Activity.Add_AssigmentActivity" />
-        <activity android:name=".Activity.LoginActivity"
+        <activity android:name="com.gegosoft.yourappname.Activity.MainActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.Add_AssigmentActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,59 +54,59 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LeaveActivity" />
-        <activity android:name=".Activity.MyLeaveActivity" />
-        <activity android:name=".Activity.AssignmentList" />
-        <activity android:name=".Activity.ApproveLeaveActivity" />
-        <activity android:name=".Activity.RejectLeaveActivity" />
-        <activity android:name=".Activity.MyProfileActivity" />
-        <activity android:name=".Activity.StudentsAssignmentActivity" />
-        <activity android:name=".Activity.To_Do_List_Activity" />
-        <activity android:name=".Activity.ToDoList_AddTask_Activity" />
-        <activity android:name=".Activity.HolidayListActivity" />
-        <activity android:name=".Activity.LessonPlanActivity" />
-        <activity android:name=".Activity.AttendanceActivity" />
-        <activity android:name=".Activity.MessageActivity" />
-        <activity android:name=".Activity.AllNotificationActivity" />
-        <activity android:name=".Activity.HomeWorkActivity" />
-        <activity android:name=".Activity.PDFWebViewActivity" />
-        <activity android:name=".Activity.StudentSubmittedHomeworkActivity" />
-        <activity android:name=".Activity.AddHomeworkActivity" />
-        <activity android:name=".Activity.MyLeaveActivityWithPermission" />
-        <activity android:name=".Activity.AbsentListActivity" />
-        <activity android:name=".Activity.StudentLeaveList" />
-        <activity android:name=".Activity.ForgotPasswordActivity" />
-        <activity android:name=".Activity.ChangePassword" />
-        <activity android:name=".Activity.ChangePasswordWithLogin" />
-        <activity android:name=".Activity.ViewExamMarkActivity" />
-        <activity android:name=".Activity.UploadMarksActivity" />
-        <activity android:name=".Activity.ExamMarkActivity" />
-        <activity android:name=".Activity.TimeTableActivity" />
-        <activity android:name=".Activity.RoomActivity"/>
-        <activity android:name=".Activity.AddInvitesActivity"/>
-        <activity android:name=".Activity.CreateRoomActivity"/>
-        <activity android:name=".Activity.EditRoomActivity"/>
-        <activity android:name=".Activity.ManageInvitesActivity"/>
-        <activity android:name=".Activity.VideoActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.LeaveActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.MyLeaveActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.AssignmentList" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ApproveLeaveActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.RejectLeaveActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.MyProfileActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.StudentsAssignmentActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.To_Do_List_Activity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ToDoList_AddTask_Activity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.HolidayListActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.LessonPlanActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.AttendanceActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.MessageActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.AllNotificationActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.HomeWorkActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.PDFWebViewActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.StudentSubmittedHomeworkActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.AddHomeworkActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.MyLeaveActivityWithPermission" />
+        <activity android:name="com.gegosoft.yourappname.Activity.AbsentListActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.StudentLeaveList" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ForgotPasswordActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ChangePassword" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ChangePasswordWithLogin" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ViewExamMarkActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.UploadMarksActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.ExamMarkActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.TimeTableActivity" />
+        <activity android:name="com.gegosoft.yourappname.Activity.RoomActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.AddInvitesActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.CreateRoomActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.EditRoomActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.ManageInvitesActivity"/>
+        <activity android:name="com.gegosoft.yourappname.Activity.VideoActivity"/>
 
         <receiver
-            android:name=".Receiver.NotificationReceiver"
+            android:name="com.gegosoft.yourappname.Receiver.NotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.gegosoft.schoolteacherapp.NotificationReceiver" />
+                <action android:name="com.gegosoft.yourappname.NotificationReceiver" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
-        <service android:name=".Services.MyFirebaseMessagingService"
+        <service android:name="com.gegosoft.yourappname.Services.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <receiver android:name=".Receiver.NotifierAlarm"
+        <receiver android:name="com.gegosoft.yourappname.Receiver.NotifierAlarm"
             android:exported="true"/>
 
     </application>
