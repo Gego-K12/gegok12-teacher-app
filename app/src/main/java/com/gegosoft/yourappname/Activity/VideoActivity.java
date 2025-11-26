@@ -152,7 +152,6 @@ public class VideoActivity extends AppCompatActivity  {
     private static final String LOCAL_AUDIO_TRACK_NAME = "mic";
     private static final String LOCAL_VIDEO_TRACK_NAME = "camera";
 
-    private static final String TWILIO_ACCESS_TOKEN = "AC9ed987a221fcfc958016b2b36ddab44d";
     private static final int PICKFILE_RESULT_CODE = 2;
 
     private String accessToken, roomName;
